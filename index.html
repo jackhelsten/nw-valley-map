@@ -1932,8 +1932,8 @@ map.on('click',async function(e){
   }
 
   // ── Mode 2: Parcel click query ──
-  // Power & Fiber mode: popups bound directly to line features
-  if(map.hasLayer(fiberBase)){
+  // Power Transmission mode: popups bound directly to line features
+  if(map.hasLayer(fiberBase)||map.hasLayer(powerTxBase)){
     return; // line click popups handled by onEachFeature bindings
   }
   // Zoning mode: JSONP query layers 11 (base zone) + 9 (PAD cases)
