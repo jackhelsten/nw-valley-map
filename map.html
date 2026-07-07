@@ -3361,6 +3361,7 @@ let nwEditing = false;
 document.title=DATA.title;
 try{
   loadState();
+  if(window.parks&&window.parks.length&&typeof window._redrawParks==='function') window._redrawParks();
   pins.forEach(addMarker);
   drawLines();
   updateStats();
